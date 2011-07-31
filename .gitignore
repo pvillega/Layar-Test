@@ -1,0 +1,15 @@
+# Java
+*.class
+
+gae-service/target/**/*
+gae-service/target/
+gae-service/war/**/*
+gae-service/war/
+layar-gae-service/target/**/*
+layar-gae-service/target/
+layar-gae-service/war/**/*
+layar-gae-service/war/
+
+.settings
+.settings/**/*
+

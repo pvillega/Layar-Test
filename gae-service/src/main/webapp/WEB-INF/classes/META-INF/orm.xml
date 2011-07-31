@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm
+        http://java.sun.com/xml/ns/persistence/orm_1_0.xsd" version="1.0">
+
+  <package>com.perevillega.model</package>
+
+  <entity class="Registre">
+    <named-query name="findRegistresByEmbassament">
+      <query><![CDATA[select r from com.perevillega.model.Registre r where r.embassament.id = :id order by r.data desc]]></query>
+    </named-query>    
+    <named-query name="findAllRegistres">
+      <query><![CDATA[select r from com.perevillega.model.Registre r order by r.data desc]]></query>
+    </named-query>
+  </entity>
+
+  <entity class="Embassament">
+    <named-query name="findAllEmbassaments">
+      <query><![CDATA[select e from com.perevillega.model.Embassament e order by e.nom asc]]></query>
+    </named-query>
+  </entity>
+
+</entity-mappings>

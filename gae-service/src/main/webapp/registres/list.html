@@ -1,0 +1,23 @@
+<lift:surround with="default" at="content">
+    <head><title><lift:loc>Llista de Registres</lift:loc></title></head>
+    <br/>
+    <a href="add"><lift:loc>Afegir</lift:loc></a>
+    <table>
+        <tr>
+            <th><lift:loc>Embassament</lift:loc></th>
+            <th><lift:loc>Data</lift:loc></th>
+            <th><lift:loc>Quantitat</lift:loc></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <lift:RegistreOps.list>
+            <tr>
+                <td><reg:embassament/></td>
+                <td><reg:data /></td>
+                <td><reg:quantitat /></td>
+                <td><reg:edit /></td>
+                <td><reg:delete /></td>
+            </tr>
+        </lift:RegistreOps.list>
+    </table>
+</lift:surround>

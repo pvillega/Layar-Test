@@ -1,0 +1,16 @@
+<lift:surround with="default" at="content">
+    <head><title><lift:loc>Afegir embassament</lift:loc></title></head>
+
+    <table>
+        <lift:EmbassamentOps.add form="post">
+            <tr><td><emb:id /></td><td></td></tr>
+            <tr><td>Nom:</td><td><emb:nom /></td></tr>
+            <tr><td>Variable:</td><td><emb:variable /></td></tr>
+            <tr><td>Unitats:</td><td><emb:unitats /></td></tr>
+            <tr><td>Latitud:</td><td><emb:latitud /></td></tr>
+            <tr><td>Longitud:</td><td><emb:longitud /></td></tr>
+            <tr><td>Capacitat:</td><td><emb:capacitat /></td></tr>
+            <tr><td></td><td><emb:submit /></td></tr>
+        </lift:EmbassamentOps.add>
+    </table>
+</lift:surround>

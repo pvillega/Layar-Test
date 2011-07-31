@@ -1,0 +1,59 @@
+What is This?
+==============
+This Liftweb application will demonstrate how to manage
+owned One-to-Many relation on Google App Engine for Java
+through the JDO2 interface.  The code has been based on 
+Derek Chen-Becker's JPADemo[1][2].
+
+
+How to Try
+==========
+Before the compilation, a few steps are needed to be done.
+  1. Download appengine-java-SDK-1.2.8.zip[3] and unzip it.
+     Suppose you have unzipped it at '/tmp/' and you have
+     '/tmp/appengine-java-sdk-1.2.8' directory.
+  2. Replace '????' for 'sdk.dir' property in build.xml with your own.
+     In this example, it should be '/tmp/appengine-java-sdk-1.2.8'.
+  3. Set your application name on GAE/J to 
+       'src/main/webapp/WEB-INF/appengine-web.xml' file.
+
+Now, you are ready to run or upload this liftweb application to GAE/J.
+
+  $ mvn package
+  $ /tmp/appengine-java-sdk-1.2.8/bin/appcfg.sh update war
+    or
+  $ /tmp/appengine-java-sdk-1.2.8/bin/dev_appserver.sh war
+
+
+Notes
+=====
+  * Entity models are defined in com.jcraft.lift.model package.
+  * This program defines two models; Author and Book, and they are
+    detachable.  Refer to those source code.
+  * Author includes many instances of Book.
+  * DetachOnClose and DatachOnCommit has been enabled by the default.
+    Refer to 'src/main/webapp/WEB-INF/classes/META-INF/jdconfig.xml'
+  * Without definitions for indexes, objects in One-to-Many relation
+    must not be persisted.
+    Refer to 'src/main/webapp/WEB-INF/datastore-indexes.xml'
+  * The package org.scala_libs.jdo is the scala wrapper for JDO2 APIs.
+
+
+TODO
+====
+  * By using the maven-datanucleus-plugin plugin, we will be able to
+    skip steps to download datanucleus-enhancer.jar file.
+  * org.scala_libs.jdo package should be independently released and
+    provided as scalajdo.
+ 
+
+Enjoy!
+
+
+atsuhiko.yamanaka@gmail.com
+Nov 06 2009
+
+
+[1] http://wiki.liftweb.net/index.php/Lift_and_JPA_(javax.persistence)
+[2] http://github.com/dpp/liftweb/tree/72554794896a720c237c8793ed9bd907c2269048/sites/JPADemo
+[3] http://code.google.com/intl/en/appengine/downloads.html#Google_App_Engine_SDK_for_Java

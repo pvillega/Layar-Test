@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes  autoGenerate="true">
+    <datastore-index kind="Embassament" ancestor="true" source="auto">
+        <property name="id" direction="asc"/>
+        <property name="nom" direction="asc"/>
+        <property name="variable" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="Registre" ancestor="true" source="auto">
+        <property name="id" direction="asc"/>
+        <property name="data" direction="asc"/>
+    </datastore-index>
+</datastore-indexes>

@@ -1,0 +1,31 @@
+<lift:surround with="default" at="content">
+    <head><title><lift:loc>Llista embassaments</lift:loc></title></head>
+    <br/>
+    <a href="add"><lift:loc>Afegir</lift:loc></a>
+    <table>
+        <tr>
+            <th><lift:loc>Nom</lift:loc></th>
+            <th><lift:loc>Variable</lift:loc></th>
+            <th><lift:loc>Unitats</lift:loc></th>
+            <th><lift:loc>Latitud</lift:loc></th>
+            <th><lift:loc>Longitud</lift:loc></th>
+            <th><lift:loc>Capacitat</lift:loc></th>
+            <th><lift:loc>Registres</lift:loc></th>
+            <th> </th>
+            <th> </th>
+        </tr>
+        <lift:EmbassamentOps.list>
+            <tr>
+                <td><emb:nom /></td>
+                <td><emb:variable /></td>
+                <td><emb:unitats /></td>
+                <td><emb:latitud /></td>
+                <td><emb:longitud /></td>
+                <td><emb:capacitat /></td>
+                <td><emb:registres /></td>
+                <td><emb:edit /></td>
+                <td><emb:delete /></td>
+            </tr>
+        </lift:EmbassamentOps.list>
+    </table>
+</lift:surround>

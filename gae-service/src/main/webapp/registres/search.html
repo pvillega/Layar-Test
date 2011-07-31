@@ -1,0 +1,27 @@
+<!-- the code is similar to the list method, but the snippet functionalities
+forces us to duplicate it, as one is a search of a subset of registers, while
+the other shows all of them -->
+<lift:surround with="default" at="content">
+    <head><title><lift:loc>Llista de Registres</lift:loc></title></head>
+    <br/>
+    <a href="add"><lift:loc>Afegir</lift:loc></a>
+    <table>
+        <tr>
+            <th><lift:loc>Embassament</lift:loc></th>
+            <th><lift:loc>Data</lift:loc></th>
+            <th><lift:loc>Quantitat</lift:loc></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <lift:RegistreOps.searchResults>
+            <tr>
+                <td><reg:embassament/></td>
+                <td><reg:data /></td>
+                <td><reg:quantitat/></td>
+                <td><reg:edit /></td>
+                <td><reg:delete /></td>
+            </tr>
+        </lift:RegistreOps.searchResults>
+    </table>
+</lift:surround>
+
